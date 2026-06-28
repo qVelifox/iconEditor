@@ -1,6 +1,7 @@
 node_modules
-*
-!dist/
-!dist/**
-!README.md
-!.gitignore
+src/
+package.json
+package-lock.json
+vite.config.js
+.github/
+dist/
