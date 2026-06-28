@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ICONS Editor</title>
+  <script type="module" crossorigin src="/assets/index-Cd8tBGzk.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-DloDu94G.css">
+</head>
+<body>
+
+  <div class="container">
+    <div class="page-header">
+      <div>
+        <h1>ICONS Editor</h1>
+        <p>Load your <code>icons.js</code>, click an icon to edit its SVG, then export.</p>
+      </div>
+    </div>
+
+    <div class="toolbar">
+      <input type="file" id="fileInput" accept=".js" hidden>
+      <button class="btn btn-danger" id="resetBtn" disabled>Reset</button>
+      <span class="spacer"></span>
+      <span id="iconCount" class="badge">0 icons</span>
+      <button class="btn btn-primary" id="exportBtn" disabled>Export icons.js</button>
+    </div>
+
+    <div class="grid" id="iconGrid">
+      <div class="empty-state" id="emptyState">Click or drag & drop an <code>icons.js</code> file here.</div>
+    </div>
+  </div>
+
+  <div class="editor-panel" id="editorPanel">
+    <div class="editor-header">
+      <h2 id="editorTitle">Edit icon</h2>
+      <button class="editor-close" id="editorClose">✕</button>
+    </div>
+    <div class="editor-body">
+      <label>Key name</label>
+      <input type="text" id="editorKey" readonly spellcheck="false">
+
+      <label>SVG</label>
+      <textarea id="editorSvg" spellcheck="false" placeholder="<svg ...>...</svg>"></textarea>
+
+      <div class="editor-preview">
+        <div id="editorPreviewSvg"></div>
+        <div>
+          <div id="editorPreviewName" style="font-size:13px;font-weight:600;color:var(--text-primary);"></div>
+          <div id="editorPreviewSize" style="font-size:11px;color:var(--text-muted);margin-top:2px;font-family:'Roboto Mono',monospace;"></div>
+        </div>
+      </div>
+    </div>
+    <div class="editor-footer">
+      <button class="btn btn-secondary" id="editorCancel">Cancel</button>
+      <button class="btn btn-primary" id="editorApply">Apply</button>
+    </div>
+  </div>
+
+</body>
+</html>
