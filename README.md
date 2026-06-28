@@ -1,4 +1,4 @@
-# iconEditor
+# iconEditor - https://qvelifox.github.io/iconEditor/dist/
 let you import your icon.js like this one:
 ```js
 export const ICONS = {
